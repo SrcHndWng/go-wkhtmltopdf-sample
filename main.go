@@ -10,7 +10,21 @@ import (
 )
 
 func main() {
-	const html = `<!doctype html><html><head><title>PRINT PDF TEST</title></head><body><div>aaa</div><div>bbb</div><div>ccc</div></body></html>`
+	const html = `<!doctype html>
+	<style>
+		.line {width:100px; border:#000000 solid 1px}
+	</style>
+	<html>
+			<head>
+				<title>PRINT PDF TEST</title>
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			</head>
+		<body>
+			<div class="line">あああ</div>
+			<div class="line">いいい</div>
+			<div class="line">ううう</div>
+		</body>
+	</html>`
 
 	pdfg := wkhtmltopdf.NewPDFPreparer()
 	pdfg.AddPage(wkhtmltopdf.NewPageReader(strings.NewReader(html)))
