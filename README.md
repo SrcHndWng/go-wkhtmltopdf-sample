@@ -10,3 +10,8 @@ https://github.com/SebastiaanKlippert/go-wkhtmltopdf/blob/master/simplesample_te
 * 日本語を出力
 
 をやってみたもの。
+
+## タグ
+
+* v1.0.0
+    * 固定のHTML形式文字列を出力。
