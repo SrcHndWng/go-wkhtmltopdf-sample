@@ -10,11 +10,26 @@ import (
 	wkhtmltopdf "github.com/SebastiaanKlippert/go-wkhtmltopdf"
 )
 
+type templateData struct {
+	Datas []data
+}
+
+type data struct {
+	Name string
+	Cal  string
+}
+
 func main() {
+	datas := make([]data, 0)
+	datas = append(datas, data{Name: "M16", Cal: "5.56"})
+	datas = append(datas, data{Name: "AK47", Cal: "7.62"})
+	datas = append(datas, data{Name: "MP5", Cal: "9.00"})
+	tmplData := templateData{Datas: datas}
+
 	t := template.Must(template.ParseFiles("sample.tpl"))
 
 	var tpl bytes.Buffer
-	if err := t.Execute(&tpl, nil); err != nil {
+	if err := t.Execute(&tpl, tmplData); err != nil {
 		log.Fatal(err)
 	}
 	html := tpl.String()

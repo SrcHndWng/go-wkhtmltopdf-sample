@@ -25,18 +25,12 @@
             <td>品名</td>
             <td>口径</td>
         </tr>
-        <tr>
-            <td>M16</td>
-            <td>5.56</td>
-        </tr>
-        <tr>
-            <td>AK47</td>
-            <td>7.72</td>
-        </tr>
-        <tr>
-            <td>MP5</td>
-            <td>9.00</td>
-        </tr>
+        {{range $i, $data := .Datas}}
+            <tr>
+                <td>{{$data.Name}}</td>
+                <td>{{$data.Cal}}</td>
+            </tr>
+        {{end}}
     </table>
     </body>
 </html>
