@@ -8,8 +8,12 @@ https://github.com/SebastiaanKlippert/go-wkhtmltopdf/blob/master/simplesample_te
 
 * divタグによる罫線の出力
 * 日本語を出力
+* テンプレートでのHTML定義
+* 画像の読み込み
 
 をやってみたもの。
+
+画像についてはsample.tpl内のimgタグに任意のURL等を設定すること。
 
 ## タグ
 

@@ -32,5 +32,7 @@
             </tr>
         {{end}}
     </table>
+    <br>
+    <img src="your favorite img" />
     </body>
 </html>
