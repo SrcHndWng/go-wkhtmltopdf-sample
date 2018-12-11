@@ -19,3 +19,7 @@ https://github.com/SebastiaanKlippert/go-wkhtmltopdf/blob/master/simplesample_te
 
 * v1.0.0
     * 固定のHTML形式文字列を出力。
+* v2.0.0
+    * テンプレートでHTMLを定義
+    * 画像を出力
+    * 日本語を出力
